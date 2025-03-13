@@ -48,7 +48,18 @@
 </ul>
 
 
-<p>The below is the screenshot showing the connection of EC2 instance in VS Code</p>
+<h2>Screenshots</h2>
+
+<p>Map before clustering of the Data</p>
+<img src="images/map_html.png" width = "800">
+
+<p>Map after clustering using K-Means</p>
+<img src="images/kmeans_map.png" width = "800">
+
+<p>Connection of EC2 instance in AWS console</p>
+<img src="images_readme/ec2_instance.jpeg" width = "800">
+
+<p>Connection of EC2 instance in VSCode</p>
 <img src="images_readme/ec2instance.png" alt="EC2 Connection" width="800">
 
 <p>Before runninng the code on the server</p>
@@ -57,3 +68,9 @@
 <p>After running the code on the server</p>
 <img src="images_readme/image-1.png" alt="After Execution" width="800">
 
+<h2>Results</h2>
+
+<h4>Elbow Method</h4>
+<img src="images/elbow_graph.png" width = "800">
+<h4>Combined graph of various clustering algorithms</h4>
+<img src="images/Clustering_graphs_of_various_algorithms.png" width = "1000">

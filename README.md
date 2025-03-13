@@ -3,7 +3,7 @@
 <h3>Approach</h3>
 <ul>
     <li>Loaded the dataset and preprocessed it by removing duplicate values (no missing values were found).</li>
-    <li>Extracted latitude and longitude, then normalized them using <code>StandardScaler</code>.</li>
+    <li>Extracted latitude and longitude from one column, then normalized them using <code>StandardScaler</code>.</li>
     <li>Removed outliers using the Z-score method, considering data points with Z-score &gt; 3 as outliers because 99.7% of data should ideally fall within 3 standard deviations.</li>
     <li>Used the Elbow Method to determine the optimal number of clusters for K-Means.</li>
     <li>Applied multiple clustering algorithms: K-Means, DBSCAN, Agglomerative Clustering, and Gaussian Mixture Models (GMM).</li>
@@ -14,7 +14,7 @@
 <h3>Assumptions</h3>
 <ul>
     <li>The dataset primarily contains geographical points that can be clustered meaningfully.</li>
-    <li>Longitude and latitude features are sufficient for clustering without additional context.</li>
+    <li>Longitude and Latitude features are sufficient for clustering without additional context.</li>
     <li>The optimal number of clusters can be estimated using the Elbow Method.</li>
     <li>DBSCAN parameters (eps and min_samples) were selected based on reasonable defaults.</li>
 </ul>

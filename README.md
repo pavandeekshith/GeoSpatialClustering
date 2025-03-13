@@ -32,21 +32,10 @@
 <h3>Solution</h3>
 <ul>
     <li>Implemented a robust preprocessing pipeline to clean the data efficiently.</li>
-    <li>Used feature scaling to improve clustering accuracy.</li>
-    <li>Removed outliers using the Z-score method (&gt;3 standard deviations considered outliers).</li>
-    <li>Tested multiple clustering methods to compare their performance.</li>
+    <li>Used Z-score for outlier removal as it preserves the structure of the dataset while eliminating extreme values.</li>
+    <li>Compared multiple clustering methods to find the most effective one.</li>
     <li>Automated the process of evaluating clustering performance using metric scores.</li>
 </ul>
-
-<h3>Results</h3>
-<ul>
-    <li>The optimal number of clusters for K-Means was found to be <strong>3</strong> based on the Elbow Method.</li>
-    <li>Silhouette Scores showed that K-Means and GMM performed best among the clustering algorithms.</li>
-    <li>DBSCAN struggled due to high-density variations in the dataset, requiring careful parameter tuning.</li>
-    <li>Visualization plots demonstrated clear separations between clusters in K-Means and Agglomerative Clustering.</li>
-    <li>Most of the data points were located in the ocean near Africa, as seen in the visualizations.</li>
-</ul>
-
 
 <h2>Screenshots</h2>
 
@@ -74,3 +63,36 @@
 <img src="images/elbow_graph.png" width = "800">
 <h4>Combined graph of various clustering algorithms</h4>
 <img src="images/Clustering_graphs_of_various_algorithms.png" width = "1000">
+
+
+<h3>Best Model Chosen: K-Means</h3>
+<p>After evaluating multiple clustering algorithms—K-Means, DBSCAN, Agglomerative Clustering, and GMM—K-Means was chosen as the best model based on clustering evaluation metrics.</p>
+
+<h4>Why K-Means?</h4>
+<ul>
+    <li>K-Means produced the highest Silhouette Score (0.527) and the lowest Davies-Bouldin Score (0.701), indicating well-separated and compact clusters.</li>
+    <li>DBSCAN struggled due to the high-density variations in the dataset.</li>
+    <li>Agglomerative Clustering and GMM had lower Silhouette Scores (0.432 and 0.473, respectively) and higher Davies-Bouldin Scores (0.932 and 0.764), making them less effective.</li>
+</ul>
+
+<h4>Why We Used Z-Score for Outlier Removal</h3>
+<ul>
+    <li>Z-score effectively removes extreme outliers while preserving the core structure of the dataset.</li>
+    <li>It is particularly useful for distance-based tasks, making it a natural fit for K-Means, which relies on Euclidean distance.</li>
+    <li>Standard deviation alone was not used because it lacks a clear threshold for distinguishing outliers.</li>
+</ul>
+
+<h4>Why Not k = 4?</h4>
+<p>Although there was a confusion between k=4 and k = 3 earlier, the evaluation metrics showed that k=3 was the optimal choice:</p>
+<ul>
+    <li>Silhouette Score for k=4: <code>0.526</code> and for k=3: <code>0.527</code>  which is lower for k=4.</li>
+    <li>Davies-Bouldin Score for k=4: <code>0.784</code> and for k=3: <code>0.701</code>  which a higher score for k=4 (indicating poorer separation).</li>
+</ul>
+<p>Since Davies-Bouldin Score should be as low as possible, and k = 3 had the best trade-off, it was selected.</p>
+
+<h3>Results</h3>
+<ul>
+    <li>The optimal number of clusters was found to be <strong>3</strong> based on metric scores.</li>
+    <li>K-Means outperformed other clustering methods in terms of cluster cohesion and separation.</li>
+    <li>Visualization confirmed that K-Means provided the most distinct and interpretable clusters.</li>
+</ul>

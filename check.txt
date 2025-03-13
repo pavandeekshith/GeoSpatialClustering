@@ -1,2 +1,2 @@
-Silhouette Scores: {'kmeans': np.float64(0.5201367508606717), 'dbscan': np.float64(0.07846692312886773), 'agglo': np.float64(0.4442532856342214), 'gmm': np.float64(0.4082831607945204)}
-Davies-Bouldin Scores: {'kmeans': np.float64(0.7302838989540055), 'dbscan': np.float64(1.438105521028844), 'agglo': np.float64(0.7818052556590525), 'gmm': np.float64(0.8251002001767794)}
+Silhouette Scores: {'kmeans': np.float64(0.5275585470662524), 'dbscan': np.float64(0.0612582733272601), 'agglo': np.float64(0.4320237329161816), 'gmm': np.float64(0.47370911245340525)}
+Davies-Bouldin Scores: {'kmeans': np.float64(0.7018239132348377), 'dbscan': np.float64(0.7679128984233254), 'agglo': np.float64(0.9322476882152211), 'gmm': np.float64(0.7646168979154274)}

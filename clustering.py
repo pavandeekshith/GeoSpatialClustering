@@ -181,7 +181,6 @@ class GeospatialClustering:
         print("K-Means Clustering Map saved as 'kmeans_map.html'. Open in a browser to view.")
 
 
-# Usage Example
 if __name__ == "__main__":
     file_path = "/Users/pavandeekshith/B-Tech/Btech_3rd_Year/6th_Sem/Geospatial_clustering/ML Assignment Dataset.csv"  # Replace with actual file path
     clustering = GeospatialClustering(file_path)

@@ -1,4 +1,4 @@
-<h2>GeoSpatialClustering</h2>
+<h2>Geo Spatial Clustering</h2>
 
 <h3>Approach</h3>
 <ul>
